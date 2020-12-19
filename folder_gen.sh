@@ -26,7 +26,8 @@ mkdir -p $DIR
 
 ## Create a cpp file for the solution
 file=${CC_CODE,,}.cpp
-touch $DIR/$file
+initial_skel="#include<iostream>\n\nusing namespace std;\n\nint main(){\n}"
+echo -e $initial_skel > $DIR/$file
 
 # Create README file
 READ_ME="## Problem link \n\n - $PROBLEM_LINK"
