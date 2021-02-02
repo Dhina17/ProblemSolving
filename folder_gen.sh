@@ -15,6 +15,11 @@ case ${OPTION} in
     -p)
     DIR=CodeChef/Practice/Beginner/$CC_CODE
     ;;
+    -dt)
+    echo "Enter the DS topic:"
+    read TOPIC
+    DIR=CodeChef/DataStructure/Topics/$TOPIC/$CC_CODE
+    ;;
     *)
     echo "${0}: usage: <option> <link>"
     exit 1
