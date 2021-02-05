@@ -20,6 +20,11 @@ case ${OPTION} in
     read TOPIC
     DIR=CodeChef/DataStructure/Topics/$TOPIC/$CC_CODE
     ;;
+    -cclc)
+    # Get contest code
+    CONTEST=$(echo ${PROBLEM_LINK##*.com/} | grep -oE "^[^a-z\/]*")
+    DIR=CodeChef/Contests/LongChallenge/$CONTEST/$CC_CODE
+    ;;
     *)
     echo "${0}: usage: <option> <link>"
     exit 1
