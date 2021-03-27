@@ -30,6 +30,11 @@ case ${OPTION} in
     CONTEST=$(echo ${PROBLEM_LINK##*.com/} | grep -oE "^[^a-z\/]*")
     DIR=CodeChef/Contests/CookOff/$CONTEST/$CC_CODE
     ;;
+    -cclt)
+    # Get Contest code
+    CONTEST=$(echo ${PROBLEM_LINK##*.com/} | grep -oE "^[^a-z\/]*")
+    DIR=CodeChef/Contests/LunchTime/$CONTEST/$CC_CODE
+    ;;
     *)
     echo "${0}: usage: <option> <link>"
     exit 1
