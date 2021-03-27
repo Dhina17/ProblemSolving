@@ -1,5 +1,18 @@
 #!/usr/bin/sh
 
+# Get the contest code
+function get_contest_code() {
+    CONTEST_CODE=$(echo ${PROBLEM_LINK##*.com/} | grep -oE "^[^a-z\/]*")
+    get_dir_name
+}
+
+# Get the dir name
+function get_dir_name() {
+    DIR=CodeChef/Contests/$CONTEST_NAME/$CONTEST_CODE/$CC_CODE
+}
+
+
+## Starts here
 # Get the option
 OPTION="${1:? Error: Give the option}"
 
@@ -21,19 +34,19 @@ case ${OPTION} in
     DIR=CodeChef/DataStructure/Topics/$TOPIC/$CC_CODE
     ;;
     -cclc)
-    # Get contest code
-    CONTEST=$(echo ${PROBLEM_LINK##*.com/} | grep -oE "^[^a-z\/]*")
-    DIR=CodeChef/Contests/LongChallenge/$CONTEST/$CC_CODE
+    # Long Challenge
+    CONTEST_NAME="LongChallenge"
+    get_contest_code
     ;;
     -ccco)
-    # Get contest code
-    CONTEST=$(echo ${PROBLEM_LINK##*.com/} | grep -oE "^[^a-z\/]*")
-    DIR=CodeChef/Contests/CookOff/$CONTEST/$CC_CODE
+    # Cook-Off
+    CONTEST_NAME="CookOff"
+    get_contest_code
     ;;
     -cclt)
-    # Get Contest code
-    CONTEST=$(echo ${PROBLEM_LINK##*.com/} | grep -oE "^[^a-z\/]*")
-    DIR=CodeChef/Contests/LunchTime/$CONTEST/$CC_CODE
+    # Lunch time
+    CONTEST_NAME="LunchTime"
+    get_contest_code
     ;;
     *)
     echo "${0}: usage: <option> <link>"
