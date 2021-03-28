@@ -48,6 +48,11 @@ case ${OPTION} in
     CONTEST_NAME="LunchTime"
     get_contest_code
     ;;
+    -ccst)
+    # Starters
+    CONTEST_NAME="Starters"
+    get_contest_code
+    ;;
     *)
     echo "${0}: usage: <option> <link>"
     exit 1
