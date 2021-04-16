@@ -68,7 +68,7 @@ mkdir -p $DIR
 
 ## Create a cpp file for the solution
 file=${CC_CODE,,}.cpp
-initial_skel="#include<iostream>\n\nusing namespace std;\n\nint main(){\n}"
+initial_skel="#include<bits/stdc++.h>\n\nusing namespace std;\n\nint main(){\n}"
 echo -e $initial_skel > $DIR/$file
 
 # Create README file
