@@ -53,6 +53,10 @@ case ${OPTION} in
     CONTEST_NAME="Starters"
     get_contest_code
     ;;
+    -dsa)
+    CONTEST_NAME="LRNDSA"
+    get_contest_code
+    ;;
     *)
     echo "${0}: usage: <option> <link>"
     exit 1
