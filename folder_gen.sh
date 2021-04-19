@@ -12,6 +12,11 @@ function get_dir_name() {
 }
 
 
+function gen_template() {
+initial_skel="#include<bits/stdc++.h>\n\nusing namespace std;\n\nint main(){\n}"
+echo -e $initial_skel > $DIR/$file	
+}
+
 ## Starts here
 # Get the option
 OPTION="${1:? Error: Give the option}"
@@ -68,8 +73,9 @@ mkdir -p $DIR
 
 ## Create a cpp file for the solution
 file=${CC_CODE,,}.cpp
-initial_skel="#include<bits/stdc++.h>\n\nusing namespace std;\n\nint main(){\n}"
-echo -e $initial_skel > $DIR/$file
+
+## Generate the template
+gen_template
 
 # Create README file
 READ_ME="## Problem link \n\n - $PROBLEM_LINK"
