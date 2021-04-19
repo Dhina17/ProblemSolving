@@ -14,6 +14,6 @@ int main(){
                 w += 1;
             }
         }
-        cout << w <<
+        cout << w << endl;
     }
 }
