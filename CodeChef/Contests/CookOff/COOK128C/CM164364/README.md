@@ -1,0 +1,3 @@
+## Problem link 
+
+ - https://www.codechef.com/COOK128C/problems/CM164364
