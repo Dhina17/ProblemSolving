@@ -82,3 +82,7 @@ echo -e $READ_ME > $DIR/README.md
 
 # Notify
 echo "Folder and File created successfully"
+
+# Open the file after creating
+vim $DIR/$file
+
