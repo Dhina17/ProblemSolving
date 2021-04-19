@@ -12,9 +12,8 @@ function get_dir_name() {
 }
 
 
-function gen_template() {
-initial_skel="#include<bits/stdc++.h>\n\nusing namespace std;\n\nint main(){\n}"
-echo -e $initial_skel > $DIR/$file	
+function copy_template() {
+	cp templates/template.cpp $DIR/$file
 }
 
 ## Starts here
@@ -74,8 +73,8 @@ mkdir -p $DIR
 ## Create a cpp file for the solution
 file=${CC_CODE,,}.cpp
 
-## Generate the template
-gen_template
+## Copy the template
+copy_template
 
 # Create README file
 READ_ME="## Problem link \n\n - $PROBLEM_LINK"
