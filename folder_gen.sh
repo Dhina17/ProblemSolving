@@ -25,10 +25,7 @@ PROBLEM_LINK="${2:? Error: Give problem link}"
 CC_CODE=${PROBLEM_LINK##*/}
 
 # Option handling
-case ${OPTION} in 
-    -d)
-    DIR=CodeChef/DataStructure/WarmUp/$CC_CODE
-    ;;
+case ${OPTION} in
     -p)
     DIR=CodeChef/Practice/Beginner/$CC_CODE
     ;;
