@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// Got bored and so copied concepts from geeksforgeeks but anyways learnt it.
+
 int getPreced(char op) {
 	switch(op) {
 		case '^':
